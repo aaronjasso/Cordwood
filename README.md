@@ -15,16 +15,16 @@ If you hold the assembled Cordwood puzzle such that the board with the six-pin h
 
 Example:
 ```
-Cordwood cw(4, 5, 7, 8, 12, 10);`
+Cordwood cw(4, 5, 7, 8, 12, 10);
 ```
 
 ###Methods
 Currently, three animations are supported. Each has a single argument for the speed of the animation. Accepted inputs are the integers 1 - 5.
-1. chase (speed)
+* chase (speed)
   -A single lit LED moves around in a circle
-2. wheel (speed)
+* wheel (speed)
   -A pair of opposite lit LEDs move around in a circle
-3. bounce (speed)
+* bounce (speed)
   -LEDs on both sides appear to bounce up and down
 
 See the example files for more information. Happy coding!
