@@ -2,7 +2,7 @@
 An Arduino library for LED animations on the Boldport Club's Cordwood Puzzle
 
 ###Introduction
-This library is intended for use with [The Cordwood Puzzle](http://www.boldport.com/products/cordwood-puzzle-second-edition/) from [The Boldport Club](http://www.boldport.club/). Optionally, [The Cuttle](https://twitter.com/Atmel/status/766334685073006592?s=09) may be used as the Arduino. In the Tap example, another Boldport project [The Tap](http://www.boldport.com/products/the-tap/) may be used for input.
+This library is intended for use with [The Cordwood Puzzle](http://www.boldport.com/products/cordwood-puzzle-second-edition/) from [The Boldport Club](http://www.boldport.club/). Optionally, [The Cuttle](https://twitter.com/Atmel/status/766334685073006592?s=09) may be used in place of an Arduino Uno. In the Tap example, another Boldport project [The Tap](http://www.boldport.com/products/the-tap/) may be used for input.
 
 Functionally, the Cordwood Puzzle is an arrangement of six LEDs that are all lit when the board is powered. A six-pin header allows each LED to be turned off individually when its corresponding control pin is pulled low. This library utilizes the control pins to create some rudimentary animations with the LEDs.
 
