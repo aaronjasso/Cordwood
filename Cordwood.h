@@ -1,0 +1,48 @@
+/****************************** Cordwood Puzzle  ******************************\
+|  Cordwood.h - Library for manipulating lights on the Cordwood Puzzle         |
+|  http://www.boldport.club/                                                   |
+|  Created by Aaron Jasso October 20, 2016                                     |
+|  Released into the public domain | http://github.com/aaronjasso/Cordwood     |
+\******************************************************************************/
+
+#ifndef Cordwood_h
+#define Cordwood_h
+
+#if ARDUINO >= 100
+  #include "Arduino.h"
+#else
+  #include "WProgram.h"
+  #include "pins_arduino.h"
+  #include "WConstants.h"
+#endif
+
+// define class Cordwood
+class Cordwood {
+  public:
+    Cordwood(byte pinLT, byte pinLM, byte pinLB, byte pinRB, byte pinRM, byte pinRT);
+    
+    void chase(int speed);
+    void wheel(int speed);
+	void bounce(int speed);
+	void allOff();
+	void update();
+
+  private:
+	unsigned long _prevTime;
+	int _pinLT;
+	int _pinLM;
+	int _pinLB;
+	int _pinRT;
+	int _pinRM;
+	int _pinRB;
+	int _LTState;
+	int _LMState;
+	int _LBState;
+	int _RTState;
+	int _RMState;
+	int _RBState;
+	int _bounceStep;
+	
+};
+
+#endif

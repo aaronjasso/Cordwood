@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map For Cordwood
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Cordwood	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+chase	KEYWORD2
+wheel	KEYWORD2
+bounce	KEYWORD2
+allOff	KEYWORD2
+update	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
