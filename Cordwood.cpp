@@ -171,7 +171,7 @@ void Cordwood::bounce(int speed)
 	}*/
 	
 	//transition middle to top
-	if(_bounceStep == 1 && millis() > _prevTime + (6 - speed)*100){
+	if(_bounceStep == 1 && millis() > _prevTime + (6 - speed+1)*100){
 		_LMState = LOW;
 		_RMState = LOW;
 		_LTState = HIGH;
@@ -181,7 +181,7 @@ void Cordwood::bounce(int speed)
 		update();
 	}
 	//transition top to middle
-	else if(_bounceStep == 2 && millis() > _prevTime + (7 - speed)*100){
+	else if(_bounceStep == 2 && millis() > _prevTime + (7 - speed+1)*100){
 		_LTState = LOW;
 		_RTState = LOW;
 		_LMState = HIGH;
@@ -191,7 +191,7 @@ void Cordwood::bounce(int speed)
 		update();
 	}
 	//transition middle to bottom
-	else if(_bounceStep == 3 && millis() > _prevTime + (6 - speed)*100){
+	else if(_bounceStep == 3 && millis() > _prevTime + (6 - speed+1)*100){
 		_LMState = LOW;
 		_RMState = LOW;
 		_LBState = HIGH;
@@ -201,7 +201,7 @@ void Cordwood::bounce(int speed)
 		update();
 	}
 	//transition bottom to middle
-	else if(_bounceStep == 4 && millis() > _prevTime + (5 - speed)*100){
+	else if(_bounceStep == 4 && millis() > _prevTime + (5 - speed+1)*100){
 		_LBState = LOW;
 		_RBState = LOW;
 		_LMState = HIGH;

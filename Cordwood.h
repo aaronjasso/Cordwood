@@ -5,8 +5,7 @@
 |  Released into the public domain | http://github.com/aaronjasso/Cordwood     |
 \******************************************************************************/
 
-#ifndef Cordwood_h
-#define Cordwood_h
+#pragma once
 
 #if ARDUINO >= 100
   #include "Arduino.h"
@@ -45,4 +44,4 @@ class Cordwood {
 	
 };
 
-#endif
+//#endif

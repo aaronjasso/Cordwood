@@ -15,9 +15,7 @@ Cordwood cw(4, 5, 7, 8, 12, 10);
 
 void setup() {
   // put your setup code here, to run once:
-  //debug
-  Serial.begin(9600);
-  //end debug
+
 }
 
 void loop() {
@@ -32,7 +30,8 @@ cw.chase(3);
 //take a single argument that sets the speed of the animation. Wheel accepts
 //1 - 5, bounce accpets 1 - 4. Comment out chase and uncomment one of the follwing
 //lines to use the animation.
+
 //cw.wheel(3);
-//cw.bounce(4);
+//cw.bounce(5);
 
 }
