@@ -24,6 +24,7 @@ class Cordwood {
     void wheel(int speed);
 	void bounce(int speed);
 	void allOff();
+	void allOn();
 	void update();
 
   private:
