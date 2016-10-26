@@ -113,6 +113,18 @@ void Cordwood::allOff()	//turn all LEDs off
 	update();
 }
 
+void Cordwood::allOn() //turn all LEDs on
+{
+	_LTState = HIGH;
+	_LMState = HIGH;
+	_LBState = HIGH;
+	_RTState = HIGH;
+	_RMState = HIGH;
+	_RBState = HIGH;
+	
+	update();
+}
+
 void Cordwood::wheel(int speed)
 {
 	if(millis() > _prevTime + (6 - speed)*100){
