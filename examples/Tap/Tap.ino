@@ -3,13 +3,20 @@
 
 #include <Cordwood.h>
 
-//define Tap output (high, Q[bar]) pins
+//Connect power and ground to Tap. Connect the Q[bar] pins of A, B, and C
+//to the Artuino and define the appropriate pins
 #define TAP_PIN_A 2
 #define TAP_PIN_B 3
 #define TAP_PIN_C 11
 byte tapSet = 0;
 
-//create Cordwood instance
+//Create instance of the Cordwood class called 'cw'
+//The arguments are the pin numbers for the LEDs in the following order:
+//LeftTop, LeftMiddle, LeftBottom, RightBottom, RightMiddle, RightTop
+
+//If you hold the assembled Cordwood puzzle such that the board with the
+//6-pin header is furthest from you and the header is pointing down, they
+//should be in order from left to right.
 Cordwood cw(4, 5, 7, 8, 12, 10);
 
 void setup() {
