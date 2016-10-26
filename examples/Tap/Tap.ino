@@ -3,10 +3,11 @@
 
 #include <Cordwood.h>
 
-//define Tap output (high) pins
-#define TAP_PIN_A 1
-#define TAP_PIN_B 2
-#define TAP_PIN_C 3
+//define Tap output (high, Q[bar]) pins
+#define TAP_PIN_A 2
+#define TAP_PIN_B 3
+#define TAP_PIN_C 11
+byte tapSet = 0;
 
 //create Cordwood instance
 Cordwood cw(4, 5, 7, 8, 12, 10);
@@ -15,24 +16,36 @@ void setup() {
   // put your setup code here, to run once:
 pinMode(TAP_PIN_A,INPUT);
 pinMode(TAP_PIN_B,INPUT);
-pinMode(TAP_PIN_c,INPUT);
-pinMode(TAP_RESET,INPUT);
+pinMode(TAP_PIN_C,INPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
 if(digitalRead(TAP_PIN_A)){
-  cw.chase(3);
+  if(tapSet != 1){
+    cw.allOff();
+    tapSet = 1;
+  }
+  cw.chase(4);
 }
 else if(digitalRead(TAP_PIN_B)){
-  cw.wheel(3);
+  if(tapSet != 2){
+    cw.allOff();
+    tapSet = 2;
+  }
+  cw.wheel(4);
 }
 else if(digitalRead(TAP_PIN_C)){
-  cw.bounce(4);
+  if(tapSet != 3){
+    cw.allOff();
+    tapSet = 3;
+  }
+  cw.bounce(5);
 }
 else {
-  cw.allOff;
+  tapSet = 0;
+  cw.allOff();
 }
 
 }
