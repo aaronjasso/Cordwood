@@ -30,6 +30,8 @@ Currently, three animations are supported. Each has a single argument for the sp
 * `bounce (speed)`
   -LEDs on both sides appear to bounce up and down
 
+Lastly, an `allOff()` function is provided to darken all the LEDs at once.
+
 See the example files for more information. Happy coding!
 
 
